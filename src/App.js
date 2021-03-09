@@ -3,9 +3,9 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./Components/Header";
 import Step1 from "./Components/Step1";
+import Step2 from "./Components/Step2";
+import Step3 from "./Components/Step3";
 
-const Step2 = () => <>Step2</>;
-const Step3 = () => <>Step3</>;
 const Result = () => <>Result</>;
 // const Header = () => <h1>Full React Form</h1>;
 
