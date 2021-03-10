@@ -8,6 +8,7 @@ import Input from "./Input";
 import { useHistory } from "react-router";
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { useData } from "../DataContext";
 
 const schema = yup.object().shape({
     firstName: yup
@@ -21,16 +22,21 @@ const schema = yup.object().shape({
 });
 
 function Step1() {
+    const { data, setValues } = useData()
     const { register, handleSubmit, errors } = useForm({
         mode: "onBlur",
+        defaultValues: {
+            firstName: data.firstName,
+            lastName: data.lastName
+        },
         resolver: yupResolver(schema)
     });
+
     const history = useHistory()
 
     const onSubmit = (data) => {
-        console.log(data);
         history.push('./step2')
-
+        setValues(data)
     };
 
     return (
