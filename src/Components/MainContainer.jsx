@@ -15,7 +15,12 @@ function MainContainer({ children, ...props }) {
     const styles = useStyles();
 
     return (
-        <Container className={styles.root} container="main" maxWidth="xs" {...props} >
+        <Container
+            className={styles.root}
+            component="main"
+            maxWidth="xs"
+            {...props}
+        >
             {children}
         </Container>
     );

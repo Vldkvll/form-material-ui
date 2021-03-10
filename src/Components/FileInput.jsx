@@ -16,7 +16,6 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '20px'
     },
     icon: {
-        // backgroundColor: '#eee',
         color: '#888',
         fontSize: '42px',
         marginTop: '16px'
